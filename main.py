@@ -75,8 +75,19 @@ class serveurDns_O7:
     self.__dns = resolDNS
 
 ###### exercice 08
-  def resolDNS_W1(url)
+  #Erreur :AttributeError: 'str' object has no attribute 'items'
+  #Je n'arrive pas à comprendre pourquoi
 
+  # def resolDNS_W1(self, url):
+  #   if verifUrl_D7(url):
+  #     for lien, ip in self.__dns.items():
+  #       if lien == url:
+  #         return ip
+  #     print("url introuvable")
+  #     return False
+  #   else:
+  #     print("erreur de format de l’url")
+  #     return False
 ###### exercice 09
 
 
@@ -124,7 +135,7 @@ def main() :
 
 	###### exercice 08
   print("exercice 08 #######################")
-
+  #print(str(test.resolDNS_W1("Leboncoin.fr"))+"\n")
 
 	###### exercice 09
   print("exercice 09 #######################")
@@ -134,4 +145,4 @@ def main() :
 
 if __name__=="__main__":
   print("main()")
-  main() 
+  main()
