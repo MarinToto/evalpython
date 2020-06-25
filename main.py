@@ -69,12 +69,18 @@ def makeTLD_C7(dico):
 
 # Zone 2 ## zone pour les classes
 ###### exercice 07
-
+class serveurDns_O7:
+  __dns =""
+  def __init__(self,resolDNS):
+    self.__dns = resolDNS
 
 ###### exercice 08
-
+  def resolDNS_W1(url)
 
 ###### exercice 09
+
+
+###### exercice 10
     
 
 # Zone 3 ## zone pour les tests des fonctions
@@ -114,7 +120,7 @@ def main() :
 
 	###### exercice 07
   print("exercice 07 #######################")
-
+  test = serveurDns_O7("reddit.com, 192.120.3.2")
 
 	###### exercice 08
   print("exercice 08 #######################")
