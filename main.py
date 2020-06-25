@@ -57,7 +57,15 @@ def ipVerifFormat_M5(adresseIp):
     result = False
   return result
 ###### exercice 06
-
+def makeTLD_C7(dico):
+  listTLD= []
+  nbTLD = 0
+  for elem in dico:
+      if  listTLD.count(elem.split(".")[1]) == 0:
+        listTLD.append(elem.split(".")[1])
+        nbTLD +=1
+  print ("Creation d'une liste de TLD comprenant {} entrees".format(nbTLD))
+  return listTLD
 
 # Zone 2 ## zone pour les classes
 ###### exercice 07
@@ -81,7 +89,7 @@ def main() :
 
 	###### exercice 01
   print("exercice 01 #######################")
-  makeDico_H6("dns.txt", ",")
+  dns=makeDico_H6("dns.txt", ",")
 
 	###### exercice 02
   print("exercice 02 #######################")
@@ -101,7 +109,7 @@ def main() :
 
 	###### exercice 06
   print("exercice 06 #######################")
-
+  print(str(makeTLD_C7(dns)) + "\n")
 	# Zone 4 ## zone pour les tests de la classe
 
 	###### exercice 07
