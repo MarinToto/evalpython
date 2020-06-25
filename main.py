@@ -35,7 +35,14 @@ def getTLD_Q3(url):
     return False
 
 ###### exercice 04
-
+def VerifTLD_S6(tldOk,tld):
+  resultat = False
+  for x in tldOk:
+    if tld == x:
+      result = True
+  if result == False:
+    print("TFL absente")
+  return result
 
 ###### exercice 05
     
@@ -77,7 +84,7 @@ def main() :
 
 	###### exercice 04
   print("exercice 04 #######################")
-
+  print(str(VerifTLD_S6(["fr","com","eu","uk"],"fr")) +"\n")
 
 	###### exercice 05
   print("exercice 05 #######################")
