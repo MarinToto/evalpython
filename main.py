@@ -36,7 +36,7 @@ def getTLD_Q3(url):
 
 ###### exercice 04
 def VerifTLD_S6(tldOk,tld):
-  resultat = False
+  result = False
   for x in tldOk:
     if tld == x:
       result = True
@@ -45,8 +45,17 @@ def VerifTLD_S6(tldOk,tld):
   return result
 
 ###### exercice 05
-    
-
+def ipVerifFormat_M5(adresseIp):
+  result = True
+  if adresseIp.count(".") == 3:
+    for x in range(0,len(adresseIp.split("."))) :
+      if int(adresseIp.split(".")[x]) < 0 or int(adresseIp.split(".")[x]) > 255:
+        print("nombre de champs incorrect")
+        result = False 
+  else:
+    print("nombre de champs incorrect")
+    result = False
+  return result
 ###### exercice 06
 
 
@@ -88,7 +97,7 @@ def main() :
 
 	###### exercice 05
   print("exercice 05 #######################")
-
+  print(str(ipVerifFormat_M5("192.125.3.5"))+"\n")
 
 	###### exercice 06
   print("exercice 06 #######################")
