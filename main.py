@@ -6,8 +6,14 @@ def exempleHello (msg):
 
 ###### exercice 01
 def makeDico_H6(name, sep):
+  dico={}
+  nbLines=0
   file = open(name, "r")
-  line = file.readline()
+  for line in file:
+    nbLines +=1
+    dico[line.split(sep)[0]] = line.split(sep)[1]
+  print ("Création d'un dictionnaire à partir du fichier {} avec {} entrées\n".format(name,nbLines))
+  return dico
 
 ###### exercice 02
 
@@ -37,51 +43,52 @@ def makeDico_H6(name, sep):
 # Zone 3 ## zone pour les tests des fonctions
 
 def main() :
-	from re import split
-	###### exercice 00 (la fonction est appelee dans cette zone afin de confirmer son fonctionnement)
-	print("exercice 00 #######################")
-	salutations = exempleHello("Michel")
-	print(salutations)
-	print(salutations.split(sep=" "))
+  from re import split
+  ###### exercice 00 (la fonction est appelee dans cette zone afin de confirmer son fonctionnement)
+  print("exercice 00 #######################")
+  salutations = exempleHello("Michel")
+  print(salutations)
+  print(salutations.split(sep=" "))
 
 	###### exercice 01
-	print("exercice 01 #######################")
+  print("exercice 01 #######################")
+  makeDico_H6("dns.txt", ",")
 
 	###### exercice 02
-	print("exercice 02 #######################")
+  print("exercice 02 #######################")
 
 
 	###### exercice 03
-	print("exercice 03 #######################")
+  print("exercice 03 #######################")
 
 
 	###### exercice 04
-	print("exercice 04 #######################")
+  print("exercice 04 #######################")
 
 
 	###### exercice 05
-	print("exercice 05 #######################")
+  print("exercice 05 #######################")
 
 
 	###### exercice 06
-	print("exercice 06 #######################")
+  print("exercice 06 #######################")
 
 	# Zone 4 ## zone pour les tests de la classe
 
 	###### exercice 07
-	print("exercice 07 #######################")
+  print("exercice 07 #######################")
 
 
 	###### exercice 08
-	print("exercice 08 #######################")
+  print("exercice 08 #######################")
 
 
 	###### exercice 09
-	print("exercice 09 #######################")
+  print("exercice 09 #######################")
 	
 	###### exercice 10
-	print("exercice 10 #######################")
+  print("exercice 10 #######################")
 
 if __name__=="__main__":
-	print("main()")
-	main()
+  print("main()")
+  main() 
