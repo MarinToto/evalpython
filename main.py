@@ -27,7 +27,12 @@ def verifUrl_D7(url):
 
 
 ###### exercice 03
-
+def getTLD_Q3(url):
+  if verifUrl_D7(url):
+    return url.split(".")[1]
+  else:
+    print("TLD mal formée")
+    return False
 
 ###### exercice 04
 
@@ -64,11 +69,11 @@ def main() :
 
 	###### exercice 02
   print("exercice 02 #######################")
-  print(str(verifUrl_D7("curiousong.fr")) + "\n")
+  print(str(verifUrl_D7("reddit.com")) + "\n")
 
 	###### exercice 03
   print("exercice 03 #######################")
-
+  print(str(getTLD_Q3("reddit.com"))+ "\n")
 
 	###### exercice 04
   print("exercice 04 #######################")
