@@ -16,6 +16,14 @@ def makeDico_H6(name, sep):
   return dico
 
 ###### exercice 02
+def verifUrl_D7(url):
+  if len(url.split(".")) == 2 :
+    if len(url.split(".")[1])<=3:
+      return True
+    else:
+      return False
+  else : 
+      return False
 
 
 ###### exercice 03
@@ -56,7 +64,7 @@ def main() :
 
 	###### exercice 02
   print("exercice 02 #######################")
-
+  print(str(verifUrl_D7("curiousong.fr")) + "\n")
 
 	###### exercice 03
   print("exercice 03 #######################")
